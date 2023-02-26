@@ -8,6 +8,7 @@ var cors = require('cors')
 var corsOptions = {
   origin: [
     'http://127.0.0.1:5173',
+    'http://127.0.0.1:4173',
     'https://audiophile-frontend-eta.vercel.app',
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204

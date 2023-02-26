@@ -22,7 +22,6 @@ exports.postInitPaiement = async (req, res) => {
     const { client_secret } = paymentIntent
     res.json({ client_secret })
   } catch (error) {
-    console.log(error)
     if (error?.response?.status)
       res.status(error.response.status).json({ error: error.message })
     else res.status(500).json({ error: error.message })
@@ -51,3 +50,5 @@ const getCartAmount = (stripeDatas, itemsPrice) => {
 const getItemsSlug = (stripeDatas) => {
   return stripeDatas.map((item) => item.slug)
 }
+
+// TODO: dans le readme, préciser que j'ai utilisé un template comme boilerplate comme base à l'app express

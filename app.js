@@ -10,7 +10,7 @@ var corsOptions = {
     'http://127.0.0.1:5173',
     'http://127.0.0.1:4173',
     'https://audiophile-frontend-eta.vercel.app',
-    'http://localhost:3000/',
+    'http://localhost:3000',
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
@@ -45,7 +45,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500)
-  res.render('error')
+  res.json({ error: 'error unknown' })
 })
 
 module.exports = app

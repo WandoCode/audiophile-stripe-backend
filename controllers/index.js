@@ -5,7 +5,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 exports.postInitPaiement = async (req, res) => {
   const SHIPPING = 5000
-
   const { stripeDatas } = req.body
 
   try {
